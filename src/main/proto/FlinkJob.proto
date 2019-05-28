@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_package = "com.github.dtkavin.face";
+
+import "google/protobuf/any.proto";
+
+//请求
+
+message MyReqeust {
+    int64 jobId = 1;
+}
+
+//响应
+message MyResponse {
+    int64 jobId = 1;
+    string jobBranch = 2;
+    string jobTwig = 3;
+    string jobName = 4;
+    string jobAlias = 5;
+    string rulesEtl = 6;
+    string jobOwner = 7;
+
+    int64 createTime = 8;
+    int64 updateTime = 9;
+}
+
+service FlinkJob{
+    rpc getJobById (MyReqeust) returns (MyResponse) {}
+}

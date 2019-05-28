@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/index.css" th:href="@{~/css/index.css}">
+    <script src="../static/js/index.js" th:src="@{~/js/index.js}"></script>
+</head>
+<body>
+<div th:text="${job.jobBranch}">jobBranch</div>
+<div th:text="${job.jobTwig}">jobTwig</div>
+<div th:text="${job.jobName}">jobName</div>
+<div th:text="${job.jobAlias}">jobAlias</div>
+</body>
+</html>
